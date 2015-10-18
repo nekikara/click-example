@@ -1,7 +1,7 @@
 import click
 
 @click.command()
-def cli():
-    """Example, script."""
-    click.echo("ken")
+@click.option('--pos', nargs=2, type=float)
+def cli(pos):
+    click.echo('%s / %s' % pos)
 
