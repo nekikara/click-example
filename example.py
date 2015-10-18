@@ -1,7 +1,8 @@
 import click
 
 @click.command()
-def cli():
+@click.option('--n', default=1)
+def cli(n):
     """Example, script."""
-    click.echo("ken")
+    click.echo('.' * n)
 
