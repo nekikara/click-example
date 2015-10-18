@@ -1,7 +1,7 @@
 import click
 
 @click.command()
-def cli():
-    """Example, script."""
-    click.echo("ken")
+@click.option('--message', '-m', multiple=True)
+def cli(message):
+    click.echo('\n'.join(message))
 
