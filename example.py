@@ -1,7 +1,7 @@
 import click
 
 @click.command()
-def cli():
-    """Example, script."""
-    click.echo("ken")
+@click.option('-v', '--verbose', count=True)
+def cli(verbose):
+    click.echo("Verbosity: %s" % verbose)
 
